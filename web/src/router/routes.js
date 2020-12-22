@@ -10,6 +10,7 @@ import IndexPage from "@/pages/IndexPage";
 import CheckOutPage from "@/pages/CheckOutPage";
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage.vue";
+import BrandPage from '../pages/BrandPage';
 
 const routes = [
   {
@@ -63,6 +64,12 @@ const routes = [
     name: 'product',
     component: ProductPage,
     props: (route) => ({ productId: route.params.id }),
+  },
+  {
+    path: '/brands/:id', /* '/product/:id', */
+    name: 'brands',
+    component: BrandPage,
+    props: (route) => ({ brandId: route.params.id }),
   },
   // end|AxrorbekNisonboyev|2020-10-21
 ];

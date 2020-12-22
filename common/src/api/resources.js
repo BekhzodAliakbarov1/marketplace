@@ -116,7 +116,7 @@ const resources = {
     },
 
     schema: {
-      attrs: ['id', 'logo', 'name'],
+      attrs: ['id', 'logo', 'name', 'text'],
     },
 
     transformer: {

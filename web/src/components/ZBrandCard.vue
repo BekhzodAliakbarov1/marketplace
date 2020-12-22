@@ -1,6 +1,10 @@
 <template>
-  <router-link class="brand-card" tag="div" :to="brand.url">
-    <img :src="brand.src" :alt="brand.description">
+  <router-link
+    class="brand-card"
+    tag="div"
+    :to="{ name: 'brands', params: { 'id': brand.id} }"
+  >
+    <img :src="`images${brand.logo}`" :alt="brand.description">
   </router-link>
 </template>
 
@@ -10,11 +14,7 @@ import VueTypes from 'vue-types';
 export default {
   name: 'ZBrandCard',
   props: {
-    brand: VueTypes.shape({
-      src: VueTypes.string.isRequired,
-      url: VueTypes.string.isRequired,
-      description: VueTypes.string.def('Brand Images Description'),
-    }),
+    brand: VueTypes.object.isRequired,
   },
 };
 </script>
@@ -24,5 +24,6 @@ export default {
     width: 10rem;
     margin: 10px;
     box-shadow: 0 0 10px 1px #ccc;
+    border-radius: .4rem;
   }
 </style>

@@ -61,9 +61,12 @@
       <section>
         <p> Все магазины </p>
         <div class="flex justify-around">
-          <z-seller-card class="mr-2"/>
-          <z-seller-card class="mx-2"/>
-          <z-seller-card class="ml-2"/>
+          <z-seller-card
+            v-for="seller in sellers"
+            :key="seller.id"
+            :seller="seller"
+            class="mr-2"
+          />
         </div>
       </section>
       <!-- Recommended -->
@@ -71,8 +74,8 @@
         <p> Рекомендуем </p>
         <div class="flex">
           <div class="w-1/2 flex mr-2">
-            <z-product-card class="mr-2"/>
-            <z-product-card class="ml-2"/>
+            <z-product-card class="mr-2" />
+            <z-product-card class="ml-2" />
           </div>
           <div class="w-1/2 ml-2">
             <ui-carousel-card
@@ -95,8 +98,8 @@
         </div>
         <div class="flex mt-8">
           <div class="w-1/2 flex mr-2">
-            <z-product-card class="mr-2"/>
-            <z-product-card class="ml-2"/>
+            <z-product-card class="mr-2" />
+            <z-product-card class="ml-2" />
           </div>
           <div class="w-1/2 ml-2">
             <ui-carousel-card
@@ -119,11 +122,11 @@
         </div>
         <div class="flex mt-8">
           <div class="w-1/2 flex mr-2">
-            <img src="images/Rectangle 432.png" alt="asdasd" >
+            <img src="images/Rectangle 432.png" alt="asdasd">
           </div>
           <div class="w-1/2 ml-2 flex">
-            <z-product-card class="mr-2"/>
-            <z-product-card class="ml-2"/>
+            <z-product-card class="mr-2" />
+            <z-product-card class="ml-2" />
           </div>
         </div>
       </section>
@@ -147,7 +150,7 @@
             :key="index"
             :price="item.price"
             :title="item.title"
-            :image="item.image"
+            :img="item.image"
             :url="item.url"
             class="mr-2"
           />
@@ -168,15 +171,8 @@
         </div>
       </section>
       <!-- Popular brands -->
-      <section class="mb-6">
+      <section v-if="brands.length > 0" class="mb-6">
         <p>Популярные бренды</p>
-        <div class="flex">
-          <z-brand-card
-            v-for="brand in brands"
-            :key="brand.id"
-            :brand="brand"
-          />
-        </div>
         <div class="flex">
           <z-brand-card
             v-for="brand in brands"
@@ -200,6 +196,8 @@ import UiCarouselCard from '@/components/ui/UiCarouselCard';
 import ZBestOffersCard from '@/components/ZBestOffersCard';
 import ZSeasonalProduct from '@/components/ZSeasonalProduct';
 import ZBrandCard from '@/components/ZBrandCard';
+import PopularApi from '../../../common/src/services/PopularApi';
+import api from '../../../common/src/api';
 
 export default {
   name: 'HomePage',
@@ -383,43 +381,8 @@ export default {
           price: 1710000,
         },
       ],
-      brands: [
-        {
-          id: 0,
-          url: '/',
-          src: 'images/dress 1 (1).png',
-        },
-        {
-          id: 1,
-          url: '/',
-          src: 'images/dress 1 (2).png',
-        },
-        {
-          id: 2,
-          url: '/',
-          src: 'images/dress 1 (3).png',
-        },
-        {
-          id: 3,
-          url: '/',
-          src: 'images/dress 1 (4).png',
-        },
-        {
-          id: 4,
-          url: '/',
-          src: 'images/dress 1 (1).png',
-        },
-        {
-          id: 5,
-          url: '/',
-          src: 'images/dress 1 (3).png',
-        },
-        {
-          id: 6,
-          url: '/',
-          src: 'images/dress 1 (2).png',
-        },
-      ],
+      brands: null,
+      sellers: null,
       startPoint: 0,
       endPoint: 3,
     };
@@ -428,6 +391,14 @@ export default {
     filteredItems() {
       return this.testData.slice(this.startPoint, this.endPoint);
     },
+  },
+  async created() {
+    this.brands = await PopularApi.brands({ count: 3 });
+    const { data: sellers } = await api.all('seller');
+    this.sellers = sellers;
+    const { data: products } = await api.all('product');
+    const popularCatalogs = await PopularApi.productCatalog({ products });
+    console.log(popularCatalogs);
   },
   methods: {
     nextItems() {
@@ -465,6 +436,7 @@ export default {
   .carousel-wrapper {
     height: 423px;
   }
+
   .reklama {
     background: url('https://cdn.pixabay.com/photo/2015/12/12/15/24/amsterdam-1089646_1280.jpg');
   }

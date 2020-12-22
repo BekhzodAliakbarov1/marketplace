@@ -3,7 +3,7 @@
   <div class="px-4 py-2 w-full">
     <div class="flex justify-between">
       <div class="w-1/5 p-2 flex align-center">
-        <ui-img :src="image || '/images/Rectangle%20455.png'" :ratio="4 / 3" />
+        <ui-img :src="img || '/images/Rectangle%20455.png'" :ratio="4 / 3" />
       </div>
       <div class="w-4/5">
         <p class="text-xs">
