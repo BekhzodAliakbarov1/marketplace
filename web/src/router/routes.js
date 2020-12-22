@@ -11,6 +11,7 @@ import CheckOutPage from "@/pages/CheckOutPage";
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage.vue";
 import BrandPage from '../pages/BrandPage';
+import CategoryPage from '../pages/CategoryPage.vue';
 
 const routes = [
   {
@@ -22,6 +23,11 @@ const routes = [
     path: "/index",
     name: "index",
     component: IndexPage,
+  },
+  {
+    path: "/category",
+    name: "category",
+    component: CategoryPage,
   },
   {
     path: "/checkout",
