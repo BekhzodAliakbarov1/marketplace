@@ -12,6 +12,7 @@ import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage.vue";
 import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
+import RestorePasswordPage from '../pages/RestorePasswordPage.vue';
 
 const routes = [
   {
@@ -63,6 +64,11 @@ const routes = [
     path: "/register",
     name: "register",
     component: RegisterPage,
+  },
+  {
+    path: "/restore",
+    name: "restore",
+    component: RestorePasswordPage,
   },
   // start|AxrorbekNisonboyev|2020-10-21
   {
