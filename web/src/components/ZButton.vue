@@ -35,7 +35,7 @@ export default {
     disabled: VueTypes.bool.def(false),
     size: VueTypes.string.def('small'),
     textColor: VueTypes.string,
-    borderColor: VueTypes.string.def(''),
+    borderColor: VueTypes.string,
     bgColor: VueTypes.string.def('white'),
     to: VueTypes.object.isRequired,
   },

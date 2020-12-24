@@ -13,7 +13,6 @@ import RegisterPage from "@/pages/RegisterPage.vue";
 import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 import RestorePasswordPage from '../pages/RestorePasswordPage.vue';
-import HelpPage from '../pages/HelpPage.vue';
 
 const routes = [
   {
@@ -55,11 +54,6 @@ const routes = [
     path: "/wishlist",
     name: "wishlist",
     component: WishlistPage,
-  },
-  {
-    path: "/help",
-    name: "help",
-    component: HelpPage,
   },
   {
     path: "/login",

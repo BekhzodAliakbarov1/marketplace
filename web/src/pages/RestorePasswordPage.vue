@@ -1,6 +1,5 @@
 <template>
-  <div id="restore">
-    <div class="restore">
+  <div class="restore center">
     <div class="div">
       <h1>Восстоновления</h1>
       <div class="img">
@@ -24,7 +23,6 @@
       </div>
       <button>Отправитъ</button>
     </div>
-  </div>
   </div>
 </template>
 

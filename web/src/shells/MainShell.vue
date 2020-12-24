@@ -1,7 +1,9 @@
 <template>
   <!-- start|AzimjonToirov|10/20/2020 -->
   <ui-layout>
-    <z-navbar />
+    <div class="w-full shadow">
+      <z-navbar />
+    </div>
     <z-home-nav />
     <router-view />
     <z-footer />
