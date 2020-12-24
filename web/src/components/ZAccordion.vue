@@ -1,10 +1,10 @@
 <template>
   <!-- //start |Doniyor Raxmonov| 2020-10-22 -->
-  <div>
+  <div class="my-2">
     <div
       class="
-          select-none bg-blue-200 cursor-pointer
-          pl-4 py-1 text-primary-500 text-2xl
+          select-none bg-gray-300 cursor-pointer
+          px-4 py-1 text-black text-xl
           font-normal flex items-center justify-between
         "
       @click="toggleCategory(id)"
@@ -27,14 +27,11 @@
     >
       <slot name="content" />
       <div
-        v-for="(item) in content"
-        :key="item"
         class="
-            bg-white cursor-pointer pl-8 py-1 text-gray-600 text-xl font-normal listItems
-            hover:underline  lg:hover:text-gray-700 h
+            bg-gray-300 px-8 py-1 text-gray-800 text-sm font-normal h
           "
       >
-        {{ item }}
+        {{ content }}
       </div>
     </div>
   </div>

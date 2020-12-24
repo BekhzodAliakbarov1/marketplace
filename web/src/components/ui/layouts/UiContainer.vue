@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" class="container mx-auto px-20">
+  <component :is="tag" class="container mx-auto">
     <slot />
   </component>
 </template>

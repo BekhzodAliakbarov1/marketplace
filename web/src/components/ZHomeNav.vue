@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="flex items-center justify-around md:container mx-auto py-3"
+    class="flex items-center justify-between md:container mx-auto py-3"
   >
     <li v-for="(item,index) in items" :key="index">
       <router-link class="text-gray-700" :to="item.link">

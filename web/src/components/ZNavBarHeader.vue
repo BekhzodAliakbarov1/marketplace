@@ -1,7 +1,7 @@
 <template>
   <header>
       <nav class="text-sm bg-gray-100">
-        <ui-container class="flex items-center justify-between py-3">
+        <ui-container class="flex items-center justify-between md:container mx-auto py-3">
           <a
             class="
               bg-gray-500
@@ -23,9 +23,9 @@
             <template #item="{ value }">
               <a
                 class="text-gray-600 hover:text-primary-500 transition-colors duration-200"
-                href="#"
+                :href="value.to"
               >
-                {{ value }}
+                {{ value.name }}
               </a>
             </template>
           </ui-list>
@@ -51,7 +51,32 @@ export default {
   computed: {
     logo: () => logo,
     deepHeader: () => ({
-      links: ['Пункты выдачи', 'Подарочные сертификаты', 'Доставка', 'Партнерам', 'Постоматы', 'Помощь'],
+      links: [
+        {
+          name: 'Пункты выдачи',
+          to: '#',
+        },
+        {
+          name: 'Подарочные сертификаты',
+          to: '#',
+        },
+        {
+          name: 'Доставка',
+          to: '#',
+        },
+        {
+          name: 'Партнерам',
+          to: '#',
+        },
+        {
+          name: 'Постоматы',
+          to: '#',
+        },
+        {
+          name: 'Помощь',
+          to: '/help',
+        },
+      ],
     }),
     header: () => ({
       links: [
