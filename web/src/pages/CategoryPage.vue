@@ -7,7 +7,7 @@
     <div class="main_container">
       <div class="container_left">
         <p>категория</p>
-        <z-accordion-list :content="content" class="text-sm my-4 pr-0"/>
+        <z-accordion-list :content="content" class="text-sm my-4 pr-0" />
         <div class="flex whitespace-nowrap bold font-bold my-4">
           <p class="text-blue">{{ toggleBtn.label }}</p>
           <z-toggle-btn :isEnabled="toggleBtn.value" class="mr-0" />
@@ -27,21 +27,21 @@
         <a href="#" class="font-bold no-underlines" style="color: #4080FF">Посмотрет все</a>
       </div>
       <div class="container-right">
-        <!-- <div class="w-full align-baseline bg-black overflow-hidden">
-          <div class="ml-0 accordion">
+        <!-- <div class="child-container">
+          <div class="accordion">
             <z-accordion-list :content="famousAccordion" />
           </div>
-          <div class="mr-0 icon">
-            <i class="fa fa-list m-6" style="color: #4080FF"></i>
-            <i class=" fa fa-bars m-6" style="color: #4080FF"></i>
+          <div class="icons">
+            <i class="fa fa-list first-icon" style="color: #4080FF"></i>
+            <i class=" fa fa-bars two-icon" style="color: #4080FF"></i>
           </div>
+          <hr class="w-4/5 m-auto">
         </div> -->
-        <!-- <hr class="w-4/5 m-auto"> -->
-        <z-product-detail class="w-screen rounded-3xl m-6" />
-        <z-product-detail class="w-screen rounded-3xl m-6" />
-        <z-product-detail class="w-screen rounded-3xl m-6" />
-        <z-product-detail class="w-screen rounded-3xl m-6" />
-        <z-product-detail class="w-screen rounded-3xl m-6" />
+        <z-product-detail class="w-full rounded-3xl m-6" />
+        <z-product-detail class="w-full rounded-3xl m-6" />
+        <z-product-detail class="w-full rounded-3xl m-6" />
+        <z-product-detail class="w-full rounded-3xl m-6" />
+        <z-product-detail class="w-full rounded-3xl m-6" />
       </div>
     </div>
   </ui-container>
@@ -243,6 +243,13 @@ export default {
     color: #4080FF;
     font-size: 1.25rem;
 
+  }
+
+  .child-container {
+    width: 80%;
+    height: 50px;
+    background-color: #333333;
+    margin-left: 0%;
   }
 
   .accordion {

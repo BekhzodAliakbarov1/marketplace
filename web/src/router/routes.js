@@ -13,8 +13,7 @@ import RegisterPage from "@/pages/RegisterPage.vue";
 import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 
-import RestorePasswordPage from '../pages/RestorePasswordPage.vue';
-
+// import RestorePasswordPage from '../pages/RestorePasswordPage.vue';
 
 const routes = [
   {
