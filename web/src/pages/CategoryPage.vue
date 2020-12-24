@@ -5,7 +5,7 @@
       <z-carousel class="h-3/6 m-auto hiehgt-half" :slides="SliderImages" />
     </section>
     <div class="main_container">
-      <div class="container_left">
+      <div class="container_left mt-2">
         <p>категория</p>
         <z-accordion-list :content="content" class="text-sm my-4 pr-0" />
         <div class="flex whitespace-nowrap bold font-bold my-4">
@@ -26,17 +26,17 @@
         <z-checkbox-group-copy :value="brendValue" class="flex flex-col" />
         <a href="#" class="font-bold no-underlines" style="color: #4080FF">Посмотрет все</a>
       </div>
-      <div class="container-right">
-        <!-- <div class="child-container">
-          <div class="accordion">
-            <z-accordion-list :content="famousAccordion" />
+      <div class="container-right mt-2">
+        <div class="w-full inline-block">
+          <div class="float-left">
+            <z-accordion-list :content="famousAccordion" class="border"/>
           </div>
-          <div class="icons">
-            <i class="fa fa-list first-icon" style="color: #4080FF"></i>
-            <i class=" fa fa-bars two-icon" style="color: #4080FF"></i>
+          <div class="inline-block float-right space-x-1">
+            <i class="fa fa-list text-xl m-4" style="color: #4080FF;"></i>
+            <i class="fa fa-bars text-xl m-4" style="color: #4080FF;"></i>
           </div>
-          <hr class="w-4/5 m-auto">
-        </div> -->
+          <hr class="w-full h-2 mt-20 bold">
+        </div>
         <z-product-detail class="w-full rounded-3xl m-6" />
         <z-product-detail class="w-full rounded-3xl m-6" />
         <z-product-detail class="w-full rounded-3xl m-6" />
@@ -215,7 +215,7 @@ export default {
   }
 
   .hiehgt-half{
-    max-height: 300px;
+    max-height: 400px;
   }
 
   .main_container {
