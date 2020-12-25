@@ -13,6 +13,7 @@ import RegisterPage from "@/pages/RegisterPage.vue";
 import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 import HelpPage from '../pages/HelpPage';
+import MagazinePage from '../pages/MagazinePage.vue';
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
     path: "/help",
     name: "help",
     component: HelpPage,
+  },
+  {
+    path: "/magazine",
+    name: "magazine",
+    component: MagazinePage,
   },
   {
     path: "/cart",

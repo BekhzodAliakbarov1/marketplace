@@ -1,6 +1,7 @@
 <template>
   <ui-container>
     <section>
+      <z-bread-crumbs :links="links" />
       <p>Ноутбуки, планшети</p>
       <z-carousel class="h-3/6 m-auto hiehgt-half" :slides="SliderImages" />
     </section>
@@ -54,6 +55,7 @@ import ZAccordionList from '@/components/ZAccordionList.vue';
 import ZToggleBtn from '../components/ZToggleBtn.vue';
 import ZProductDetail from '../components/ZProductDetail.vue';
 import ZCheckboxGroupCopy from '../components/ZCheckboxGroupCopy.vue';
+import ZBreadCrumbs from '../components/ZBreadCrumbs.vue';
 
 export default {
   name: 'CategoryPage',
@@ -64,9 +66,23 @@ export default {
     ZToggleBtn,
     ZProductDetail,
     ZCheckboxGroupCopy,
+    ZBreadCrumbs,
   },
   data() {
     return {
+      links: [
+        {
+          id: 1,
+          label: 'Главная',
+          to: '/',
+        },
+        {
+          id: 2,
+          label: 'Magazine',
+          to: '/magazine',
+        },
+      ],
+
       SliderImages: [
         {
           id: 1,
@@ -242,24 +258,6 @@ export default {
   .text-blue {
     color: #4080FF;
     font-size: 1.25rem;
-
-  }
-
-  .child-container {
-    width: 80%;
-    height: 50px;
-    background-color: #333333;
-    margin-left: 0%;
-  }
-
-  .accordion {
-    max-width: 100px;
-    margin-left: 0;
-  }
-
-  .icon {
-    max-width: 100px;
-    margin-right: 0;
   }
 
 </style>
