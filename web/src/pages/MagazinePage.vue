@@ -12,6 +12,14 @@
       :slides="SliderImages"
       class="hiehgt-half my-2"
       />
+      <div class="grid grid-cols-3 gap-4 my-8">
+        <z-seller-card
+          v-for="seller in sellers"
+          :key="seller.id"
+          :seller="seller"
+          class="mr-2 rounded-xl my-4"
+        />
+      </div>
   </ui-container>
 </template>
 
@@ -20,6 +28,7 @@ import UiContainer from '../components/ui/layouts/UiContainer.vue';
 import ZBreadCrumbs from '../components/ZBreadCrumbs.vue';
 import ZCarousel from '../components/ZCarousel.vue';
 import ZHashTag from '../components/ZHashTag.vue';
+import ZSellerCard from '../components/ZSellerCard.vue';
 
 export default {
   name: 'MagazinePage',
@@ -28,6 +37,7 @@ export default {
     UiContainer,
     ZHashTag,
     ZCarousel,
+    ZSellerCard,
   },
   data() {
     return {
@@ -77,6 +87,80 @@ export default {
           id: 3,
           src: 'https://cdn.pixabay.com/photo/2015/05/15/14/27/eiffel-tower-768501_1280.jpg',
           alt: '',
+        },
+      ],
+      sellers: [
+        {
+          id: 1,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 2,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 3,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 4,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 5,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 6,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 7,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 8,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 9,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 10,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 11,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
+        },
+        {
+          id: 12,
+          logo: 'https://www.google.com/search?q=magazine+logo&rlz=1C1GCEA_enUZ888UZ889&sxsrf=ALeKk00TFbyZG_nrsw_OPWCEW7l4HLqUkQ:1608959241261&tbm=isch&source=iu&ictx=1&fir=tHV3PBHhFCvHgM%252CjeL57-XFsREh2M%252C_&vet=1&usg=AI4_-kQmVmqqE9sshpZZl6cRfz-Cm__A3w&sa=X&ved=2ahUKEwiP4KGg8OrtAhVjwosKHZ_zDAcQ9QF6BAgEEAE#imgrc=tHV3PBHhFCvHgM',
+          name: 'Market Place',
+          text: 'Ecobozor &mdash; это сеть рынков нового формата, модернизированные базары, по уровню комфорта не уступающие торговым центрам. Сеть была создана для того, чтобы жители Узбекистана могли покупать только свежие и натуральные фермерские продукты по доступным ценам',
         },
       ],
     };
