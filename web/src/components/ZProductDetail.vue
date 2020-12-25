@@ -1,5 +1,5 @@
 <template>
-  <div class=" relative ">
+  <div class=" relative w-full inline-block">
     <div class="inline-block">
       <div>
         <z-product-detail-carausel
@@ -79,7 +79,7 @@
                15.3 15.3C15.3 14.365 14.535 13.6 13.6 13.6Z"
                 fill="#3377FF"/>
             </svg>
-            <span class="inline-block pl-2 text-xl font-bold"> В корзину</span>
+            <span class="inline-block pl-2 text-xl font-bold mb-0 mr-0"> В корзину</span>
           </button>
         </div>
       </div>
