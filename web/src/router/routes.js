@@ -14,6 +14,7 @@ import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 import HelpPage from '../pages/HelpPage';
 import MagazinePage from '../pages/MagazinePage.vue';
+import ProfileSettingsPage from '../pages/ProfileSettingsPage.vue';
 
 const routes = [
   {
@@ -60,6 +61,11 @@ const routes = [
     path: "/profile",
     name: "profile",
     component: CartPage,
+  },
+  {
+    path: "/settings",
+    name: "settings",
+    component: ProfileSettingsPage,
   },
   {
     path: "/wishlist",
