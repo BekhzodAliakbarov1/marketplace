@@ -8,7 +8,7 @@ import Http from '../http';
 import Auth from '../auth';
 
 class MPlaceGateway extends AbstractGateway {
-  static #API_HOST = 'http://market.zetsoft.uz:8080';
+  static #API_HOST = 'http://market.zetsoft.uz';
 
   #http = new Http({
     baseURL: `${MPlaceGateway.#API_HOST}/rest`,
@@ -262,10 +262,10 @@ class MPlaceGateway extends AbstractGateway {
           localStorage.setItem('token', data);
           token = localStorage.getItem('token');
         }
-        console.log(token);
       });
     if (token) {
       this.#auth.token = token;
+      console.log(token);
     }
   }
 

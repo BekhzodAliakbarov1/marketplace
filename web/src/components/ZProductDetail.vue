@@ -98,11 +98,11 @@ export default {
   data() {
     return {
       slides: [
-        { id: 1, src: 'https://otdelkasten.com/wp-content/uploads/2018/06/6daa35d95cbb9d7bbe2a7b4bacd952fc.jpg' },
+        { id: 1, src: 'https://otdelkasten.com/wp-content/uploads/2018/06/6daa35d95cbb9d7bbe2a7b4bacd952fc.jpg', alt: 'alternative' },
         { id: 2, src: 'https://pbs.twimg.com/media/DwyYy8hWwAARyII.jpg' },
-        { id: 3, src: 'https://www.zastavki.com/pictures/1366x768/2008/Photoshop_Empty_plane_008144_.jpg' },
-        { id: 4, src: 'https://im0-tub-com.yandex.net/i?id=90e935cf5e20066860f541dd88ebd21f&n=13' },
-        { id: 5, src: 'https://dzerginsk.by/uploads/f9/0d/f90d5d3d2449bd5418ce50401656e4c4.jpg' },
+        { id: 3, src: 'https://www.zastavki.com/pictures/1366x768/2008/Photoshop_Empty_plane_008144_.jpg', alt: 'alternative' },
+        { id: 4, src: 'https://im0-tub-com.yandex.net/i?id=90e935cf5e20066860f541dd88ebd21f&n=13', alt: 'alternative' },
+        { id: 5, src: 'https://dzerginsk.by/uploads/f9/0d/f90d5d3d2449bd5418ce50401656e4c4.jpg', alt: 'alternative' },
       ],
     };
   },

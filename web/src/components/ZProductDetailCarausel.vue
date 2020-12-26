@@ -11,7 +11,7 @@
         >
           <img :src="chooseBtn(index)" alt="" width="10px" height="10px"></div>
     </div>
-      <img :src="slides[index].src" :style="{width: width + 'px', height: height + 'px' }" :alt="alt"/>
+      <img :src="slides[index].src" :style="{width: width + 'px', height: height + 'px' }" />
     </div>
   </div>
 </template>

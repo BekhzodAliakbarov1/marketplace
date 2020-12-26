@@ -48,14 +48,14 @@ export default {
           label: 'Дом',
           link: 'something',
         },
-        {
-          label: 'Мужчинам',
-          link: 'something',
-        },
-        {
-          label: 'Женщинам',
-          link: 'something',
-        },
+        // {
+        //   label: 'Мужчинам',
+        //   link: 'something',
+        // },
+        // {
+        //   label: 'Женщинам',
+        //   link: 'something',
+        // },
       ],
     };
   },
