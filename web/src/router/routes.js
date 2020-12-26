@@ -14,6 +14,7 @@ import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 import HelpPage from '../pages/HelpPage';
 import MagazinePage from '../pages/MagazinePage.vue';
+import DeliveryPage from '../pages/DeliveryPage.vue';
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/category",
     name: "category",
     component: CategoryPage,
+  },
+  {
+    path: "/delivery",
+    name: "delivery",
+    component: DeliveryPage,
   },
   {
     path: "/checkout",

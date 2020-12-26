@@ -14,7 +14,7 @@
       >
       <ui-icon v-bind="icon" :class="[checkColor, checkSize]" />
     </span>
-    <span class="mr-2">{{ label }}</span>
+    <span class="mr-2 text-bold">{{ label }}</span>
   </label>
   <!--end: Aziz Rozmetov  10/25/2020-->
 </template>
