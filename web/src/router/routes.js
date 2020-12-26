@@ -14,7 +14,11 @@ import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 import HelpPage from '../pages/HelpPage';
 import MagazinePage from '../pages/MagazinePage.vue';
+<<<<<<< HEAD
 import ProfileSettingsPage from '../pages/ProfileSettingsPage.vue';
+=======
+import DeliveryPage from '../pages/DeliveryPage.vue';
+>>>>>>> 47a05b70d5b6b62d9e0f14c550dd9901ae56a936
 
 const routes = [
   {
@@ -31,6 +35,11 @@ const routes = [
     path: "/category",
     name: "category",
     component: CategoryPage,
+  },
+  {
+    path: "/delivery",
+    name: "delivery",
+    component: DeliveryPage,
   },
   {
     path: "/checkout",
