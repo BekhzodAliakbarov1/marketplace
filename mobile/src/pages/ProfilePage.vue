@@ -18,7 +18,7 @@
 <script>
 import ZProfileCategories from '@/components/ZProfileCategories';
 import ZProfileHeader from '@/components/ZProfileHeader';
-import api from '@common/api';
+import IdentityApi from '@common/services/IdentityApi';
 
 export default {
   name: 'ProfilePage',
@@ -85,7 +85,7 @@ export default {
     };
   },
   async created() {
-    this.userData = await api.me();
+    this.userData = await IdentityApi.me();
     this.isLoading = false;
   },
   methods: {

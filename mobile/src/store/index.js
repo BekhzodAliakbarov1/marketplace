@@ -44,6 +44,10 @@ const checkoutState = createPersistedState({
   key: 'checkout',
   paths: ['checkout'],
 });
+const authState = createPersistedState({
+  key: 'auth',
+  paths: ['auth'],
+});
 
 const store = new Vuex.Store({
   modules: {
@@ -68,6 +72,7 @@ const store = new Vuex.Store({
     locationsState,
     creditCardState,
     checkoutState,
+    authState,
   ],
   strict: process.env.DEV,
 });
