@@ -10,7 +10,7 @@
       mx-auto py-3"
     >
       <div class="w-1/4 flex justify-between">
-        <z-logo src="images/logo.svg" :to="{ name: 'home' }" />
+        <z-logo src="/images/logo.svg" :to="{ name: 'home' }" />
         <z-button
           :to="{ name: 'category' }"
           title="Каталог"

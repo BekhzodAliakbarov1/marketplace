@@ -5,10 +5,10 @@
         <label>Наведите камеру <br> на Qr-код, чтобы скачать</label>
       </div>
       <div class=" text-center  px-4 py-2 m-2">
-        <ZFooterGooglPlay src="images/google-play.svg" :to="{ name: 'home' }" />
+        <ZFooterGooglPlay src="/images/google-play.svg" :to="{ name: 'home' }" />
       </div>
       <div class="text-center  px-4 py-2 m-2">
-        <ZFooterAppStore src="images/app-store.svg" :to="{ name: 'home' }" />
+        <ZFooterAppStore src="/images/app-store.svg" :to="{ name: 'home' }" />
       </div>
       <!-- <div class=" text-center  px-4 py-2 m-2 relative custom-phoneqr">
         <ZPhoneQr src="images/phone-qr.svg" :to="{ name: 'home' }" />
@@ -86,16 +86,16 @@
           <label class="text-xl text-gray-900">Мы принимаем</label>
           <div class="grid grid-cols-2 my-8">
             <div class="p-1">
-              <img src="images/logo-visa.svg">
+              <img src="/images/logo-visa.svg">
             </div>
             <div class="p-1">
-              <img src="images/logo-uzcard.svg">
+              <img src="/images/logo-uzcard.svg">
             </div>
             <div class="p-1">
-              <img src="images/logo-payme.svg">
+              <img src="/images/logo-payme.svg">
             </div>
             <div class="p-1">
-              <img src="images/logo-click.svg">
+              <img src="/images/logo-click.svg">
             </div>
           </div>
         </div>
@@ -113,10 +113,10 @@
             </li>
           </ul>
           <div class="grid grid-cols-4 my-8">
-            <div><img src="images/logo-telegram.svg"></div>
-            <div><img src="images/logo-facebook.svg"></div>
-            <div><img src="images/logo-wk.svg"></div>
-            <div><img src="images/logo-instagram.svg"></div>
+            <div><img src="/images/logo-telegram.svg"></div>
+            <div><img src="/images/logo-facebook.svg"></div>
+            <div><img src="/images/logo-wk.svg"></div>
+            <div><img src="/images/logo-instagram.svg"></div>
           </div>
         </div>
       </div>

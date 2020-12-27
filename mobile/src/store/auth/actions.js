@@ -1,5 +1,7 @@
 import api from '@common/api';
 
+// import IdentityApi from '@common/services/IdentityApi';
+
 export async function register({ commit }, userData) {
   try {
     await api.register(userData);
@@ -14,6 +16,7 @@ export async function login({ commit }, credentials) {
   try {
     console.log('LOGIN ACTION');
     await api.login(credentials);
+    // const me = await IdentityApi.me();
     commit('setIsAuthorized', true);
   } catch {
     commit('setIsAuthorized', false);

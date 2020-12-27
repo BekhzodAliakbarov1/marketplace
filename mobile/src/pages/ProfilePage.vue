@@ -6,7 +6,6 @@
     <div v-else>
       <span>{{userData}}</span>
       <z-profile-header
-        :user="userData"
       />
       <z-profile-categories
         :data="fakeData"
@@ -19,7 +18,6 @@
 <script>
 import ZProfileCategories from '@/components/ZProfileCategories';
 import ZProfileHeader from '@/components/ZProfileHeader';
-import IdentityApi from '@common/services/IdentityApi';
 
 export default {
   name: 'ProfilePage',
@@ -81,14 +79,8 @@ export default {
         },
 
       ],
-      userData: null,
-      isLoading: true,
+      isLoading: false,
     };
-  },
-  async created() {
-    console.log('PROFILE ME');
-    this.userData = await IdentityApi.me();
-    this.isLoading = false;
   },
   methods: {
     showFunc(payload) {

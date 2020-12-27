@@ -10,18 +10,14 @@ import IndexPage from "@/pages/IndexPage";
 import CheckOutPage from "@/pages/CheckOutPage";
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage.vue";
-<<<<<<< HEAD
-import AllComponents from "@/pages/AllComponents";
-=======
 import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 import HelpPage from '../pages/HelpPage';
 import MagazinePage from '../pages/MagazinePage.vue';
-<<<<<<< HEAD
-import ProfileSettingsPage from '../pages/ProfileSettingsPage.vue';
-=======
+import ProfilePage from '../pages/ProfilePage.vue';
 import DeliveryPage from '../pages/DeliveryPage.vue';
->>>>>>> 47a05b70d5b6b62d9e0f14c550dd9901ae56a936
+import Error404Page from '../pages/Error404Page';
+import PasswordPage from '../pages/PasswordPage';
 
 const routes = [
   {
@@ -72,12 +68,17 @@ const routes = [
   {
     path: "/profile",
     name: "profile",
-    component: CartPage,
+    component: ProfilePage,
   },
   {
-    path: "/settings",
-    name: "settings",
-    component: ProfileSettingsPage,
+    path: "/profile/update-password",
+    name: "updatePassword",
+    component: PasswordPage,
+  },
+  {
+    path: "*",
+    name: "404",
+    component: Error404Page,
   },
   {
     path: "/wishlist",

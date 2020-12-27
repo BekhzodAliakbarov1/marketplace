@@ -21,6 +21,13 @@
         @input="$emit('toggleEvent', value)"
       />
     </q-item>
+    <q-item>
+      <q-btn
+        flat
+        label="Выйти"
+        @click="onLogout"
+      />
+    </q-item>
   </q-list>
 </template>
 
@@ -52,6 +59,10 @@ export default {
       } else {
         console.log('on process');
       }
+    },
+    async onLogout() {
+      await this.$store.dispatch('auth/logout');
+      await this.$router.push({ name: 'home' });
     },
   },
 };
