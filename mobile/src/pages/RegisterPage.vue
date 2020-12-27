@@ -19,9 +19,16 @@ export default {
   methods: {
     async onRegister(user) {
       try {
+        console.log('TRY');
+        console.log('TRY');
+        console.log('TRY');
         await this.$store.dispatch('auth/register', user);
+        // await this.$store.dispatch('auth/register', user);
         await this.$router.replace(this.redirectTo);
       } catch {
+        console.log('CATCH');
+        console.log('CATCH');
+        console.log('CATCH');
         this.$q.notify({
           message: 'Пользователь с данным номер уже зарегистрирован',
           type: 'negative',

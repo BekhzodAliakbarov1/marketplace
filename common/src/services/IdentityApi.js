@@ -8,7 +8,6 @@ class IdentityApi {
   async me() {
     // const token = localStorage.getItem('auth-token');
     const token = localStorage.getItem('token');
-
     const { data: raw } = await axios.get(`${API_HOST}/api/auth/me.aspx`, {
       params: {
         token,

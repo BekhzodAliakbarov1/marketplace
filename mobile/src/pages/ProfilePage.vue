@@ -4,6 +4,7 @@
       <q-spinner size="sm" />
     </div>
     <div v-else>
+      <span>{{userData}}</span>
       <z-profile-header
         :user="userData"
       />
@@ -85,6 +86,7 @@ export default {
     };
   },
   async created() {
+    console.log('PROFILE ME');
     this.userData = await IdentityApi.me();
     this.isLoading = false;
   },

@@ -1,6 +1,7 @@
 <template>
   <div class="flex q-mb-lg">
-    <q-avatar v-if="user.avatar.length" class="flex self-center avatar" size="80px">
+    <span>{{user}}</span>
+    <q-avatar v-if="user.avatar" class="flex self-center avatar" size="80px">
       <img
         :src="user.avatar"
         class="avatar-image"
