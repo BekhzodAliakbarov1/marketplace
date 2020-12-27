@@ -3,24 +3,24 @@
     <template v-slot:section>
       <div class="flex justify-between w-full">
         <div class="w-1/4">
-          <ui-img src="/images/Rectangle%20455.png" :ratio="16 / 9" />
+          <img :src="`/images/${seller.logo}`">
         </div>
         <div class="w-3/4">
           <p class="seller-name">
-            Mplace
+            {{ seller.name }}
           </p>
           <div class="description md:text-xs">
-            Защита экрана №1 в Мире
+            {{ seller.text }}
           </div>
         </div>
       </div>
       <div class="flex w-full h-auto mt-4">
         <div class="w-3/4 flex justify-start">
-          <img src="images/Rectangle 452 (1).png" />
+          <img src="images/Rectangle 452 (1).png">
         </div>
         <div class="w-1/4 flex flex-col justify-between">
-          <img src="images/Rectangle%20454%20(1).png" />
-          <img src="images/Rectangle%20453%20(1).png" />
+          <img src="images/Rectangle%20454%20(1).png">
+          <img src="images/Rectangle%20453%20(1).png">
         </div>
       </div>
     </template>
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import UiImg from '@/components/ui/UiImg';
+import VueTypes from 'vue-types';
 
 export default {
   name: 'ZSellerCard',
-  components: {
-    UiImg,
+  props: {
+    seller: VueTypes.object.isRequired,
   },
 };
 </script>

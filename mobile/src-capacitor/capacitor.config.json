@@ -1,0 +1,7 @@
+{
+  "appId": "com.example.app",
+  "appName": "Market Place",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}

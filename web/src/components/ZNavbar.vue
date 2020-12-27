@@ -12,6 +12,7 @@
       <div class="w-1/4 flex justify-between">
         <z-logo src="images/logo.svg" :to="{ name: 'home' }" />
         <z-button
+          :to="{ name: 'category' }"
           title="Каталог"
           icon="fas fa-align-left mr-2"
           class="py-2 text-white w-32 mr-8"

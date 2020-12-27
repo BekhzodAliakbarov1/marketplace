@@ -31,7 +31,7 @@ export default {
   props: {
     editable: VueTypes.bool.def(false),
     value: VueTypes.number.def(1),
-    size: VueTypes.integer.def(50),
+    size: VueTypes.number.def(50),
     increment: VueTypes.number.def(1),
     animated: VueTypes.bool.def(false),
     glow: VueTypes.integer.def(4),

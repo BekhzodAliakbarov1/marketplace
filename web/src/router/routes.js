@@ -10,7 +10,15 @@ import IndexPage from "@/pages/IndexPage";
 import CheckOutPage from "@/pages/CheckOutPage";
 import LoginPage from "@/pages/LoginPage";
 import RegisterPage from "@/pages/RegisterPage.vue";
+<<<<<<< HEAD
 import AllComponents from "@/pages/AllComponents";
+=======
+import BrandPage from '../pages/BrandPage';
+import CategoryPage from '../pages/CategoryPage.vue';
+import HelpPage from '../pages/HelpPage';
+import MagazinePage from '../pages/MagazinePage.vue';
+import DeliveryPage from '../pages/DeliveryPage.vue';
+>>>>>>> 47a05b70d5b6b62d9e0f14c550dd9901ae56a936
 
 const routes = [
   {
@@ -24,6 +32,16 @@ const routes = [
     component: IndexPage,
   },
   {
+    path: "/category",
+    name: "category",
+    component: CategoryPage,
+  },
+  {
+    path: "/delivery",
+    name: "delivery",
+    component: DeliveryPage,
+  },
+  {
     path: "/checkout",
     name: "checkout",
     component: CheckOutPage,
@@ -32,6 +50,16 @@ const routes = [
     path: "/about",
     name: "about",
     component: About,
+  },
+  {
+    path: "/help",
+    name: "help",
+    component: HelpPage,
+  },
+  {
+    path: "/magazine",
+    name: "magazine",
+    component: MagazinePage,
   },
   {
     path: "/cart",
@@ -66,9 +94,10 @@ const routes = [
     props: (route) => ({ productId: route.params.id }),
   },
   {
-    path: "/all" /* '/product/:id', */,
-    name: "all",
-    component: AllComponents,
+    path: '/brands/:id', /* '/product/:id', */
+    name: 'brands',
+    component: BrandPage,
+    props: (route) => ({ brandId: route.params.id }),
   },
   // end|AxrorbekNisonboyev|2020-10-21
 ];
