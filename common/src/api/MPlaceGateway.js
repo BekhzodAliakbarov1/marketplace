@@ -249,14 +249,15 @@ class MPlaceGateway extends AbstractGateway {
     await this.#http.post('http://market.zetsoft.uz/api/auth/register.aspx', userData);
     console.log(userData);
     return this.login({
-      phone: userData.phone,
+      phone: userData.email,
       password: userData.password,
     });
   }
 
   async login({ phone, password }) {
     let token;
-    fetch(`${MPlaceGateway.#API_HOST}/api/auth/login.aspx?login=${phone}&password=${password}`).then((resp) => resp.json())
+    fetch(`${MPlaceGateway.#API_HOST}/api/auth/login.aspx?login=${phone}&password=${password}`)
+      .then((resp) => resp.json())
       .then((data) => {
         if (data) {
           localStorage.setItem('token', data);
