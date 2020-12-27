@@ -33,7 +33,7 @@
       <p class="texy-lg py-2">Настройки безопасности:</p>
       <div class="flex flex-wrap gap-2">
         <a
-        href="#"
+        href="/profile/update-password"
         class="bg-white
         font-semibold focus:outline-none
         py-2 px-4 border hover:border-primary-500 rounded"

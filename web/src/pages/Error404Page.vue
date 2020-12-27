@@ -1,6 +1,6 @@
 <template>
   <div class="container m-auto flex justify-center align-center">
-    <img src="images/404.png" alt="error">
+    <img src="/images/404.png" alt="error">
   </div>
 </template>
 
