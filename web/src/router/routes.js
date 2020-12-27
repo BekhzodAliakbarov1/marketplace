@@ -14,11 +14,9 @@ import BrandPage from '../pages/BrandPage';
 import CategoryPage from '../pages/CategoryPage.vue';
 import HelpPage from '../pages/HelpPage';
 import MagazinePage from '../pages/MagazinePage.vue';
-<<<<<<< HEAD
 import ProfileSettingsPage from '../pages/ProfileSettingsPage.vue';
-=======
 import DeliveryPage from '../pages/DeliveryPage.vue';
->>>>>>> 47a05b70d5b6b62d9e0f14c550dd9901ae56a936
+import Error404Page from '../pages/Error404Page.vue';
 
 const routes = [
   {
@@ -75,6 +73,11 @@ const routes = [
     path: "/settings",
     name: "settings",
     component: ProfileSettingsPage,
+  },
+  {
+    path: "*",
+    name: "404",
+    component: Error404Page,
   },
   {
     path: "/wishlist",
