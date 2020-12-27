@@ -262,10 +262,10 @@ class MPlaceGateway extends AbstractGateway {
           localStorage.setItem('token', data);
           token = localStorage.getItem('token');
         }
-        console.log(token);
       });
     if (token) {
       this.#auth.token = token;
+      console.log(token);
     }
   }
 

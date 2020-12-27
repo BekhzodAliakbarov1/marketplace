@@ -5,13 +5,7 @@
     <img :src="productImage" class="imgproduct object-cover" alt="product photo">
     <div class="description">
       <p class="text-gray-900 pt-2 font-medium">
-        {{ description.title }}
-      </p>
-      <p class="text-gray-600 pt-2 font-light">
-        {{ description.body }}
-      </p>
-      <p class="text-gray-600 pt-2 font-light">
-        {{ description.body }}
+        {{ description }}
       </p>
     </div>
     <div class="seller other ">
@@ -20,19 +14,19 @@
       </div>
       <div class="sellerInfo">
         <!--        <ui-star-rating class="ratingStar" />-->
-        <p class="text-gray-600 font-light ml-2">
+        <!-- <p class="text-gray-600 font-light ml-2">
           {{ seller.reviewsCount }} отзывов
-        </p>
-        <p class="text-gray-600 ml-2 font-light">
+        </p> -->
+        <!-- <p class="text-gray-600 ml-2 font-light">
           {{ seller.questionCount }} вопросов
-        </p>
+        </p> -->
       </div>
     </div>
     <div class="price other  flex flex-col justify-around">
       <div class="mx-auto">
-        <span class="text-xl">{{ price.value }}</span>
-        <div v-if="price.old" class="line-through pl-5 text-gray-600 font-light">
-          {{ price.old }}
+        <span class="text-xl">{{ price }}</span>
+        <div v-if="item.oldPrice" class="line-through pl-5 text-gray-600 font-light">
+          {{ item.oldPrice }}
         </div>
       </div>
       <z-button
