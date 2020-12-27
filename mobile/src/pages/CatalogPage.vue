@@ -233,7 +233,7 @@ export default {
       }
 
       const { options } = this.catalog.element.product;
-      console.log(options);
+
       const optionTypes = uniqBy(map(options, 'type'), 'id');
 
       return optionTypes.map((optionType) => ({
@@ -258,7 +258,6 @@ export default {
           'element.options.type',
         ],
       });
-      console.log(catalog);
 
       return catalog;
     },

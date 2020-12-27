@@ -18,12 +18,11 @@ export default {
   },
   methods: {
     async onLogin(credentials) {
-      // await api.login(credentials);
       try {
         await this.$store.dispatch('auth/login', credentials);
         console.log('TRY');
-        // await api.login(credentials);
         await this.$router.replace(this.redirectTo);
+        console.log('after routing');
       } catch (e) {
         console.log('CATCH');
         this.$q.notify({ message: 'Email или пароль введен неверно', type: 'negative', position: 'top' });
