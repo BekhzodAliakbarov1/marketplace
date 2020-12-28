@@ -18,7 +18,7 @@ import VueTypes from 'vue-types';
 export default {
   name: 'ZPopularCategoryCard',
   props: {
-    category: VueTypes.category.isRequired,
+    category: VueTypes.category.isRequired.somethingElse,
   },
 };
 </script>

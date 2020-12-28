@@ -22,7 +22,10 @@ export default (VueTypes) => {
     getter: true,
     type: VueTypes.shape({
       id: VueTypes.id,
+      icon: VueTypes.string,
       name: VueTypes.string,
+      image: VueTypes.id,
+      brands: VueTypes.arrayOf(VueTypes.object),
       parent: VueTypes.id,
     }).loose,
   });

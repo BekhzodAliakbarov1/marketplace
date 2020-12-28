@@ -44,10 +44,10 @@ export default {
       if (hasItem) {
         this.$store.dispatch('filters/clearCategory');
         this.$store.dispatch('filters/setCategory', id);
-        this.hasId = true;
+        // this.hasId = true; => Bu o'zi true/false bo'ladi
       } else {
         this.$store.dispatch('filters/removeCategory', id);
-        this.hasId = false;
+        // this.hasId = false; => Bu o'zi true/false bo'ladi
       }
     },
     // end Axrorbek Nisonboyev

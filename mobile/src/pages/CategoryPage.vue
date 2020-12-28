@@ -11,12 +11,12 @@
       <template v-else class="row q-mt-md">
         <div class="category-header q-my-sm q-mx-auto q-px-md q-py-sm">
           <p class="text-left text-subtitle2">
-            {{ category.data.name }}
+            {{ category.name }}
           </p>
         </div>
         <z-tooled-product-list
           :option-groups="optionGroups"
-          :brands="category.data.brands"
+          :brands="category.brands"
           :products="products"
         />
       </template>
@@ -42,7 +42,7 @@ export default {
   },
   // end: Mirfozil Makhmudov
   props: {
-    categoryId: VueTypes.number.isRequired,
+    categoryId: VueTypes.id.isRequired,
   },
   data() {
     return {
@@ -139,7 +139,7 @@ export default {
     const optionsIds = uniq(flatMap(this.products, 'options'));
     this.options = await api.multiple('option', optionsIds);
     this.optionGroups = await this.fetchOptionGroups(this.options.data);
-    await this.$store.dispatch('toolbar/setTitle', this.category.data.name);
+    await this.$store.dispatch('toolbar/setTitle', this.category.name);
     // end: Mirfozil Makhmudov
     this.isLoading = false;
   },
