@@ -19,6 +19,7 @@ import DeliveryPage from '../pages/DeliveryPage.vue';
 import Error404Page from '../pages/Error404Page';
 import PasswordPage from '../pages/PasswordPage';
 import RestorePasswordPage from '../pages/RestorePasswordPage';
+import SecretPage from '../pages/SecretPage.vue';
 
 const routes = [
   {
@@ -55,6 +56,11 @@ const routes = [
     path: "/help",
     name: "help",
     component: HelpPage,
+  },
+  {
+    path: "/secret",
+    name: "secret",
+    component: SecretPage,
   },
   {
     path: "/magazine",
