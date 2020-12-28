@@ -1,9 +1,18 @@
 <template>
-  <div class="restore center">
-    <div class="div">
+  <div>
+    <div v-if="success" class=" container m-auto grid justify-center success">
+      <img src="/images/success.png" class="m-auto my-4" alt="Success">
+      <p class="text-primary-600 text-center text-2xl my-5">Пароль успешно восстановлен!</p>
+      <button
+      class="bg-primary-500 hover:bg-white text-white
+      hover:text-primary-500 font-semibold my-5 w-1/2 m-auto focus:outline-none
+      py-2 px-4 border hover:border-primary-500 rounded"><router-link to="/">Главная страница</router-link></button>
+    </div>
+    <div class="restore" v-if="!success">
+      <div class="div">
       <h1>Восстоновления</h1>
       <div class="img">
-        <img src="images/authentication 1.png" alt="Restore">
+        <img src="images/restore.png" alt="Restore">
       </div>
       <div class="route">
         <router-link to="/login">Войти</router-link>
@@ -21,7 +30,8 @@
           <input type="password" v-model="newPwd">
         </div>
       </div>
-      <button>Отправитъ</button>
+      <button @click="success = true">Отправитъ</button>
+    </div>
     </div>
   </div>
 </template>
@@ -33,6 +43,7 @@ export default {
     return {
       email: '',
       newPwd: '',
+      success: false,
     };
   },
 };

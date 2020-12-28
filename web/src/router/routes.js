@@ -18,6 +18,7 @@ import ProfilePage from '../pages/ProfilePage.vue';
 import DeliveryPage from '../pages/DeliveryPage.vue';
 import Error404Page from '../pages/Error404Page';
 import PasswordPage from '../pages/PasswordPage';
+import RestorePasswordPage from '../pages/RestorePasswordPage';
 
 const routes = [
   {
@@ -89,6 +90,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: LoginPage,
+  },
+  {
+    path: "/restore",
+    name: "restore",
+    component: RestorePasswordPage,
   },
   {
     path: "/register",
