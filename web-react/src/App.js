@@ -1,9 +1,9 @@
-import './App.css';
+import Card from "./components/Card";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-black-200 bold">Hello World</h1>
+      <Card />
     </div>
   );
 }
